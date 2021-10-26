@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@antfu/eslint-config': ^0.10.0
   '@iconify-json/carbon': ^1.0.7
+  '@iconify-json/mdi': ^1.0.6
   '@intlify/vite-plugin-vue-i18n': ^2.4.0
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
@@ -36,8 +37,10 @@ specifiers:
   vue: ^3.2.20
   vue-demi: ^0.11.4
   vue-i18n: ^9.1.9
+  vue-plyr: ^7.0.0
   vue-router: ^4.0.12
   vue-tsc: ^0.28.7
+  youtube-player: ^5.5.2
 
 dependencies:
   '@vueuse/core': 6.7.3_vue@3.2.20
@@ -53,6 +56,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.10.0_eslint@8.0.1+typescript@4.4.4
   '@iconify-json/carbon': 1.0.7
+  '@iconify-json/mdi': 1.0.6
   '@intlify/vite-plugin-vue-i18n': 2.4.0_vite@2.6.10+vue-i18n@9.1.9
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
@@ -78,7 +82,9 @@ devDependencies:
   vite-plugin-vue-layouts: 0.5.0_c97fc32927a062c7f513bfcd0e7f4663
   vite-plugin-windicss: 1.4.12_vite@2.6.10
   vite-ssg: 0.15.5_a0a90783c90c5f513849e8cf8a8751aa
+  vue-plyr: 7.0.0
   vue-tsc: 0.28.7_typescript@4.4.4
+  youtube-player: 5.5.2
 
 packages:
 
@@ -1365,6 +1371,12 @@ packages:
       '@iconify/types': 1.0.10
     dev: true
 
+  /@iconify-json/mdi/1.0.6:
+    resolution: {integrity: sha512-SLaeou/9FKXNJd58tfyw0Vfm40DbEmUf4LHAvD8cuvcysAulgM9NGm0/RQtmUwwJDUZxFKrujNdfh9xK89dkSA==}
+    dependencies:
+      '@iconify/types': 1.0.10
+    dev: true
+
   /@iconify/types/1.0.10:
     resolution: {integrity: sha512-SN3z6einVeUckDQiE8p4POF7X4hk4/y2+a7a4ogJOCxX5XT6z1zXNN8dwS5O1vloXpc6mkHizRZm2qPnhK6NnQ==}
     dev: true
@@ -2563,6 +2575,11 @@ packages:
       semver: 7.0.0
     dev: true
 
+  /core-js/3.19.0:
+    resolution: {integrity: sha512-L1TpFRWXZ76vH1yLM+z6KssLZrP8Z6GxxW4auoCj+XiViOzNPJCAuTIkn03BGdFe6Z5clX5t64wRIRypsZQrUg==}
+    requiresBuild: true
+    dev: true
+
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
@@ -2641,6 +2658,10 @@ packages:
   /csstype/2.6.18:
     resolution: {integrity: sha512-RSU6Hyeg14am3Ah4VZEmeX8H7kLwEEirXe6aU2IPfKNvhXwTflK5HQRDNI0ypQXoqmm+QPyG2IaPuQE5zMwSIQ==}
     dev: false
+
+  /custom-event-polyfill/1.0.7:
+    resolution: {integrity: sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==}
+    dev: true
 
   /data-urls/3.0.0:
     resolution: {integrity: sha512-4AefxbTTdFtxDUdh0BuMBs2qJVL25Mow2zlcuuePegQwgD6GEmQao42LLEeksOui8nL4RcNEugIpFP7eRd33xg==}
@@ -4449,6 +4470,14 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
+  /load-script/1.0.0:
+    resolution: {integrity: sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=}
+    dev: true
+
+  /loadjs/4.2.0:
+    resolution: {integrity: sha512-AgQGZisAlTPbTEzrHPb6q+NYBMD+DP9uvGSIjSUM5uG+0jG15cb8axWpxuOIqrmQjn6scaaH8JwloiP27b2KXA==}
+    dev: true
+
   /local-pkg/0.1.0:
     resolution: {integrity: sha512-WsR2tHvRGIxcC2clC30ECb5fjywzsjQagaHIy1+ykZaHz0ByoB0OL2riHqIYA5YYnensRXLszwbzHkhKzehZDg==}
     dependencies:
@@ -5202,6 +5231,10 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /rangetouch/2.0.1:
+    resolution: {integrity: sha512-sln+pNSc8NGaHoLzwNBssFSf/rSYkqeBXzX1AtJlkJiUaVSJSbRAWJk+4omsXkN+EJalzkZhWQ3th1m0FpR5xA==}
+    dev: true
+
   /raw-body/2.4.0:
     resolution: {integrity: sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==}
     engines: {node: '>= 0.8'}
@@ -5531,6 +5564,10 @@ packages:
       '@polka/url': 1.0.0-next.20
       mime: 2.5.2
       totalist: 1.1.0
+    dev: true
+
+  /sister/3.0.2:
+    resolution: {integrity: sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA==}
     dev: true
 
   /slash/3.0.0:
@@ -6080,6 +6117,10 @@ packages:
       punycode: 2.1.1
     dev: true
 
+  /url-polyfill/1.1.12:
+    resolution: {integrity: sha512-mYFmBHCapZjtcNHW0MDq9967t+z4Dmg5CJ0KqysK3+ZbyoNOWQHksGCTWwDhxGXllkWlOc10Xfko6v4a3ucM6A==}
+    dev: true
+
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
@@ -6428,6 +6469,13 @@ packages:
       vue: 3.2.20
     dev: false
 
+  /vue-plyr/7.0.0:
+    resolution: {integrity: sha512-NvbO/ZzV1IxlBQQbQlon5Sk8hKuGAj3k4k0XVdi7gM4oSqu8mZMhJ3WM3FfAtNfV790jbLnb8P3dHYqaBqIv6g==}
+    dependencies:
+      plyr: github.com/sampotts/plyr/1b835cb657b7a86e574f88ba7f7215d1fcafc4b4
+      vue: 2.6.14
+    dev: true
+
   /vue-router/4.0.12_vue@3.2.20:
     resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==}
     peerDependencies:
@@ -6445,6 +6493,10 @@ packages:
     dependencies:
       typescript: 4.4.4
       vscode-vue-languageservice: 0.28.7
+    dev: true
+
+  /vue/2.6.14:
+    resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
     dev: true
 
   /vue/3.2.20:
@@ -6817,4 +6869,24 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  /youtube-player/5.5.2:
+    resolution: {integrity: sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ==}
+    dependencies:
+      debug: 2.6.9
+      load-script: 1.0.0
+      sister: 3.0.2
+    dev: true
+
+  github.com/sampotts/plyr/1b835cb657b7a86e574f88ba7f7215d1fcafc4b4:
+    resolution: {tarball: https://codeload.github.com/sampotts/plyr/tar.gz/1b835cb657b7a86e574f88ba7f7215d1fcafc4b4}
+    name: plyr
+    version: 3.6.9
+    dependencies:
+      core-js: 3.19.0
+      custom-event-polyfill: 1.0.7
+      loadjs: 4.2.0
+      rangetouch: 2.0.1
+      url-polyfill: 1.1.12
     dev: true
