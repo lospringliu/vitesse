@@ -11,7 +11,7 @@ const toggleLocales = () => {
 </script>
 
 <template>
-  <nav class="text-xl mt-6">
+  <nav class="text-xl mt-0">
     <router-link class="icon-btn mx-2" to="/" :title="t('button.home')">
       <carbon-campsite />
     </router-link>
@@ -20,6 +20,14 @@ const toggleLocales = () => {
       <carbon-moon v-if="isDark" />
       <carbon-sun v-else />
     </button>
+
+    <router-link class="icon-btn mx-2" to="/videos" title="videos">
+      <mdi-video />
+    </router-link>
+
+    <router-link class="icon-btn mx-2" to="/ipfs" title="ipfs">
+      <carbon-blockchain />
+    </router-link>
 
     <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
       <carbon-language />
