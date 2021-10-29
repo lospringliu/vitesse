@@ -10,18 +10,16 @@
   <meta name="theme-color" content="#ffffff">
   <script>
     (function() {
+      // localStorage.getItem('google-api-key') || localStorage.setItem("google-api-key", 'AIzaSyB45Wu2r4NUvLS04fC4UDCEhi2ofPEOxNo')
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
       const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
       if (setting === 'dark' || (prefersDark && setting !== 'light'))
         document.documentElement.classList.toggle('dark', true)
     })()
   </script>
-  <!--
-  <script src="https://unpkg.com/youtube-vue3" type="text/javascript"></script>
-  -->
   <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/hlsjs-ipfs-loader@0.3.0/dist/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@0.14.7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hlsjs-ipfs-loader/dist/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@0.14.17"></script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', async() => {
       const node = await window.Ipfs.create({ repo: `ipfs-${Math.floor(Math.random() * 1000000)}` })

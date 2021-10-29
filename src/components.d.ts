@@ -17,6 +17,7 @@ declare module 'vue' {
     Footer: typeof import('./components/Footer.vue')['default']
     MdiVideo: typeof import('~icons/mdi/video')['default']
     README: typeof import('./components/README.md')['default']
+    Vue3Youtube: typeof import('./components/Vue3Youtube.vue')['default']
     VuePlyr: typeof import('./components/VuePlyr.vue')['default']
     YoutubeVue3: typeof import('./components/YoutubeVue3.vue')['default']
   }
