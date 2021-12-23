@@ -11,26 +11,36 @@ const toggleLocales = () => {
 </script>
 
 <template>
-  <nav class="text-xl mt-6">
-    <router-link class="icon-btn mx-2" to="/" :title="t('button.home')">
-      <carbon-campsite />
-    </router-link>
+  <nav class="text-xl mt-6 flex justify-center">
+    <div class="mx-auto mx-4">
+      <router-link class="icon-btn mx-2" to="/" :title="t('button.home')">
+        <carbon-campsite />
+      </router-link>
+    </div>
 
-    <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-      <carbon-moon v-if="isDark" />
-      <carbon-sun v-else />
-    </button>
+    <div class="mx-auto mx-4">
+      <router-link class="icon-btn mx-2" to="/video" :title="t('button.video')">
+        <carbon-video />
+      </router-link>
+    </div>
 
-    <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
-      <carbon-language />
-    </a>
+    <div class="mx-auto mx-4">
+      <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
+        <carbon-moon v-if="isDark" />
+        <carbon-sun v-else />
+      </button>
+    </div>
 
-    <router-link class="icon-btn mx-2" to="/about" :title="t('button.about')">
-      <carbon-dicom-overlay />
-    </router-link>
+    <div class="mx-auto mx-4">
+      <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
+        <carbon-language />
+      </a>
+    </div>
 
-    <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
-      <carbon-logo-github />
-    </a>
+    <div class="mx-auto mx-4">
+      <router-link class="icon-btn mx-2" to="/about" :title="t('button.about')">
+        <carbon-dicom-overlay />
+      </router-link>
+    </div>
   </nav>
 </template>

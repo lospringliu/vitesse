@@ -7,13 +7,18 @@ declare module 'vue' {
     CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
     CarbonLanguage: typeof import('~icons/carbon/language')['default']
-    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonPedestrian: typeof import('~icons/carbon/pedestrian')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
+    CarbonVideo: typeof import('~icons/carbon/video')['default']
     CarbonWarning: typeof import('~icons/carbon/warning')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    Navier: typeof import('./components/Navier.vue')['default']
     README: typeof import('./components/README.md')['default']
+    Youtube: typeof import('./components/Youtube.vue')['default']
+    YoutubePlayer: typeof import('./components/YoutubePlayer.vue')['default']
+    YoutubeVideo: typeof import('./components/YoutubeVideo.vue')['default']
+    YoutubeVideos: typeof import('./components/YoutubeVideos.vue')['default']
   }
 }
 
