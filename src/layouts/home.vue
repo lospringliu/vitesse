@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col justify-between min-h-full px-2 py-0 text-center text-gray-700 dark:text-gray-200">
+  <main class="p-2 max-w-4xl grid gap-4 place-items-center min-h-screen text-center text-gray-700 dark:text-gray-200">
     <Footer />
     <router-view />
   </main>
